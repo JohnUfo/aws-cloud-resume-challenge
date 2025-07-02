@@ -1,158 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Umidjon Tursunov - DevOps Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-color: #2c3e50;
-      --secondary-color: #18bc9c;
-      --background-color: #ecf0f1;
-      --text-color: #2c3e50;
-      --link-color: #2980b9;
+      --primary: #0f172a;
+      --accent: #10b981;
+      --bg: #f9fafb;
+      --white: #ffffff;
+      --text: #1e293b;
     }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
+
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 40px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.15);
-      border-radius: 10px;
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
     }
-    h1 { color: var(--secondary-color); font-size: 32px; }
-    h2, h3 { color: var(--primary-color); }
-    .header { text-align: center; }
-    .section { margin-top: 30px; }
-    .section-title {
-      border-bottom: 3px solid var(--secondary-color);
-      padding-bottom: 6px;
-      margin-bottom: 15px;
-      font-size: 20px;
-      text-transform: uppercase;
-      color: var(--primary-color);
-    }
-    ul { padding-left: 20px; }
-    .contact {
+
+    header {
+      background: var(--primary);
+      color: var(--white);
       text-align: center;
-      font-size: 14px;
-      margin-top: 20px;
-      color: #555;
+      padding: 2rem;
+      animation: fadeInDown 1s ease-out;
     }
-    .link { color: var(--link-color); text-decoration: none; }
-    .link:hover { text-decoration: underline; }
-    .subsection { margin-bottom: 15px; }
-    a.link { font-weight: bold; }
-    strong { color: var(--primary-color); }
-    .counter-number {
-      margin-top: 10px;
-      font-size: 14px;
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #cbd5e1;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: var(--white);
+      border-radius: 8px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+      animation: fadeInUp 1s ease-out;
+    }
+
+    section {
+      margin-bottom: 2rem;
+      animation: slideInLeft 0.6s ease-out;
+    }
+
+    .section-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+      margin-bottom: 1rem;
+      padding-bottom: 0.3rem;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 1.5rem;
+    }
+
+    .contact, .certificates {
+      font-size: 0.9rem;
+      color: #334155;
+    }
+
+    .certificates a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .certificates a:hover {
+      text-decoration: underline;
+    }
+
+    .highlight {
       font-weight: bold;
-      color: #444;
+      color: var(--primary);
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <h1>UMIDJON TURSUNOV</h1>
-      <p><em>Aspiring DevOps Engineer</em></p>
-    </div>
+  <header>
+    <h1>Umidjon Tursunov</h1>
+    <p>Aspiring DevOps Engineer</p>
+  </header>
 
-    <div class="section">
+  <main>
+    <section>
       <div class="section-title">Education</div>
-      <div class="subsection">
-        <strong>134 - High School</strong> (2015 - 2022)<br>
-        High School Diploma
-      </div>
-      <div class="subsection">
-        <strong>Tashkent Polytechnic University, Tashkent</strong> (2022 - Present)<br>
-        Bachelor of Science in Information Technology
-      </div>
-    </div>
+      <p><span class="highlight">134 - High School</span> (2015 - 2022)<br>High School Diploma</p>
+      <p><span class="highlight">Tashkent Polytechnic University</span> (2022 - Present)<br>BSc in Information Technology</p>
+    </section>
 
-    <div class="section">
+    <section>
       <div class="section-title">Experience</div>
-      <div class="subsection">
-        <strong>E-commerce DevOps Implementation</strong><br>
-        <ul>
-          <li>Implemented containerization, orchestration, IaC, and CI/CD in a demo project</li>
-          <li>Set up GitHub Actions and Argo CD for Java microservices</li>
-          <li>Worked with AWS VPC, subnets, load balancers</li>
-          <li>Used Route 53 to map DNS nameservers</li>
-        </ul>
-      </div>
-    </div>
+      <p><span class="highlight">E-commerce DevOps Implementation</span></p>
+      <ul>
+        <li>Implemented containerization, orchestration, IaC, and CI/CD in a demo project</li>
+        <li>Set up GitHub Actions and Argo CD for Java microservices</li>
+        <li>Worked with AWS VPC, subnets, load balancers</li>
+        <li>Used Route 53 to map DNS nameservers</li>
+      </ul>
+    </section>
 
-    <div class="section">
+    <section>
       <div class="section-title">Projects</div>
       <ul>
         <li>Hands-on experience with DevOps practices in microservice architecture</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <div class="section-title">Courses</div>
       <ul>
         <li>Java Backend Bootcamp (PDP Academy, 2021 - 2022)</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <div class="section-title">Skills</div>
       <ul>
-        <li><strong>Containerization & Orchestration:</strong> Docker, Docker-Compose</li>
-        <li><strong>Configuration & IaC:</strong> Ansible</li>
-        <li><strong>Cloud & Virtualization:</strong> AWS (VPC, ELB, IAM, Route 53, RDS, S3, EC2, CloudFront , Elastic Beanstalk, Lambda)</li>
-        <li><strong>CI/CD:</strong> GitHub Actions, GitLab CI/CD</li>
-        <li><strong>DBMS:</strong> PostgreSQL, MySQL</li>
-        <li><strong>Programming:</strong> Java, Python</li>
-        <li><strong>Scripting:</strong> Bash, Python</li>
+        <li><span class="highlight">Containerization & Orchestration:</span> Docker, Docker-Compose</li>
+        <li><span class="highlight">Configuration & IaC:</span> Ansible</li>
+        <li><span class="highlight">Cloud & Virtualization:</span> AWS (VPC, ELB, IAM, Route 53, RDS, S3, EC2, CloudFront, Elastic Beanstalk, Lambda)</li>
+        <li><span class="highlight">CI/CD:</span> GitHub Actions, GitLab CI/CD</li>
+        <li><span class="highlight">DBMS:</span> PostgreSQL, MySQL</li>
+        <li><span class="highlight">Programming:</span> Java, Python</li>
+        <li><span class="highlight">Scripting:</span> Bash, Python</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <div class="section-title">Languages</div>
       <ul>
         <li>English (C1)</li>
         <li>Russian (Basic)</li>
         <li>Uzbek (Native)</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section class="certificates">
       <div class="section-title">Certificates</div>
-      <a class="link" href="https://www.udemy.com/certificate/UC-5875cdd0-a595-4f6c-92c1-9b55774f4720/">View Certificate</a>
-    </div>
+      <a href="https://www.udemy.com/certificate/UC-5875cdd0-a595-4f6c-92c1-9b55774f4720/">View Certificate</a>
+    </section>
 
-    <div class="section contact">
-      <p><strong>Contact:</strong> +998-90-067-95-75 | <a class="link" href="mailto:tursunov.umidjon.uz@gmail.com">tursunov.umidjon.uz@gmail.com</a></p>
+    <section class="contact">
+      <div class="section-title">Contact</div>
+      <p><strong>Phone:</strong> +998-90-067-95-75</p>
+      <p><strong>Email:</strong> <a href="mailto:tursunov.umidjon.uz@gmail.com">tursunov.umidjon.uz@gmail.com</a></p>
       <p><strong>Location:</strong> Qorasayroy 3-17, Tashkent</p>
-      <p><a class="link" href="https://linktr.ee/muydinov_u">https://linktr.ee/muydinov_u</a></p>
-    </div>
-  </div>
-
-  <script>
-    const counter = document.querySelector(".counter-number");
-    async function updateCounter(){
-      console.log("Calling fetch...");
-      try {
-        let response = await fetch("https://iffivry7jsxvawt2iyyhjfrpde0xodfe.lambda-url.us-east-1.on.aws/");
-        console.log("Got response:", response);
-        let data = await response.json();
-        console.log("Parsed JSON:", data);
-      } catch (error) {
-        console.error("Fetch failed:", error);
-      }
-    }
-    updateCounter();
-  </script>
+      <p><a href="https://linktr.ee/muydinov_u">Linktree Profile</a></p>
+    </section>
+  </main>
 </body>
 </html>
