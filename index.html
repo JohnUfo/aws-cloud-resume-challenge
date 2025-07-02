@@ -45,6 +45,12 @@
       color: #cbd5e1;
     }
 
+    .counter {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -94,36 +100,18 @@
     }
 
     @keyframes fadeInDown {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      0% {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes slideInLeft {
-      0% {
-        opacity: 0;
-        transform: translateX(-30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
+      0% { opacity: 0; transform: translateX(-30px); }
+      100% { opacity: 1; transform: translateX(0); }
     }
   </style>
 </head>
@@ -131,6 +119,7 @@
   <header>
     <h1>Umidjon Tursunov</h1>
     <p>Aspiring DevOps Engineer</p>
+    <div class="counter" id="viewCounter">Website Views: Loading...</div>
   </header>
 
   <main>
@@ -200,5 +189,20 @@
       <p><a href="https://linktr.ee/muydinov_u">Linktree Profile</a></p>
     </section>
   </main>
+
+  <script>
+    async function updateCounter() {
+      const counterElement = document.getElementById("viewCounter");
+      try {
+        const response = await fetch("https://iffivry7jsxvawt2iyyhjfrpde0xodfe.lambda-url.us-east-1.on.aws/");
+        const data = await response.json();
+        counterElement.textContent = `Website Views: ${data.views}`;
+      } catch (error) {
+        counterElement.textContent = "Website Views: Unable to load.";
+        console.error("View counter error:", error);
+      }
+    }
+    updateCounter();
+  </script>
 </body>
 </html>
