@@ -1,8 +1,7 @@
 # AWS Cloud Resume Challenge
-[![Upload Website](https://github.com/rishabkumar7/aws-cloud-resume-challenge/actions/workflows/front-end-CICD.yml/badge.svg)](https://github.com/rishabkumar7/aws-cloud-resume-challenge/actions/workflows/front-end-CICD.yml)
 
-This is my attempt at cloud resume challenge in AWS.
-What is Cloud Resume Challenge? - [The Cloud Resume Challenge](https://cloudresumechallenge.dev/) is a multiple-step resume project which helps build and demonstrate skills fundamental to pursuing a career in Cloud. The project was published by Forrest Brazeal.
+This is my attempt at the Cloud Resume Challenge in AWS.  
+What is Cloud Resume Challenge? — [The Cloud Resume Challenge](https://cloudresumechallenge.dev/) is a multi-step resume project that helps build and demonstrate skills fundamental to pursuing a career in Cloud.
 
 ## Architecture
 
@@ -14,6 +13,10 @@ What is Cloud Resume Challenge? - [The Cloud Resume Challenge](https://cloudresu
 - AWS CloudFront
 - Certificate Manager
 - AWS Lambda
-- Dynamo DB
+- DynamoDB
 - GitHub Actions
 - Terraform
+
+## 🔥 Live Feature
+
+When you open [muydinovu.online](https://muydinovu.online), it counts and updates the **number of viewers** in real time using AWS Lambda and DynamoDB.
